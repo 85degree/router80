@@ -2,7 +2,8 @@ FROM ubuntu:latest
 MAINTAINER "Abdul Gaffur A Dama <apung.dama@gmail.com>" #2015-11-17
 
 RUN apt-get update
-RUN apt-get install -y build-essential software-properties-common python-software-properties pcre pcre-devel
+RUN apt-get install -y build-essential software-properties-common python-software-properties \
+ libpcre3 libpcre3-dev
 RUN add-apt-repository ppa:chris-lea/redis-server
 RUN apt-get update
 RUN apt-get install -y redis-server
