@@ -5,7 +5,7 @@ RUN apt-get update
 RUN apt-get install -y build-essential software-properties-common python-software-properties
 RUN add-apt-repository ppa:chris-lea/redis-server
 RUN apt-get update
-RUN apt-get install redis-server
+RUN apt-get install -y redis-server
 
 ENV OPENRESTY_VERSION 1.9.3.1
 ADD ngx_openresty-${OPENRESTY_VERSION}.tar.gz /root/
