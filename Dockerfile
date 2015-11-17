@@ -1,9 +1,10 @@
 FROM ubuntu:latest
 MAINTAINER "Abdul Gaffur A Dama <apung.dama@gmail.com>" #2015-11-17
 
+RUN apt-get update
+RUN apt-get install -y build-essential software-properties-common python-software-properties
 RUN add-apt-repository ppa:chris-lea/redis-server
 RUN apt-get update
-RUN apt-get install -y build-essential
 RUN apt-get install redis-server
 
 ENV OPENRESTY_VERSION 1.9.3.1
